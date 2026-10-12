@@ -42,28 +42,31 @@ const $ = id => document.getElementById(id);
 const zapLink = txt => `https://wa.me/${ZAP}?text=${encodeURIComponent(txt)}`;
 
 // menu mobile (hambúrguer vira X)
-$('burger').onclick = () => {
-  const aberto = $('side').classList.toggle('open');
-  $('burger').innerHTML = aberto ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
-};
-$('side').onclick = e => {
-  if (e.target.closest('nav a')) {
-    $('side').classList.remove('open');
-    $('burger').innerHTML = '<i class="fa-solid fa-bars"></i>';
+(() => {
+  const burger = document.getElementById('burger');
+  const side = document.getElementById('side');
+
+  function menu(abrir) {
+    side.classList.toggle('open', abrir);
+    burger.classList.toggle('open', abrir);
+    burger.setAttribute('aria-expanded', abrir);
+    burger.querySelector('i').className = abrir ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
   }
-};
 
-// cards
-$('cards').innerHTML = produtos.map((p, i) => `
-  <button class="card" data-i="${i}">
-    <img src="${p.itens[0].img}" alt="${p.nome}" loading="lazy">
-    <div><h3>${p.nome}</h3><p>${p.desc}</p><i class="fa-solid fa-circle-arrow-right"></i></div>
-  </button>`).join('');
-$('cards').onclick = e => {
-  const c = e.target.closest('.card');
-  if (c) abrir(+c.dataset.i);
-};
+  burger.addEventListener('click', () => menu(!side.classList.contains('open')));
 
+  side.querySelectorAll('nav a').forEach((a) => {
+    a.addEventListener('click', () => menu(false));
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') menu(false);
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) menu(false);
+  });
+})();
 // modal
 let cat = 0;
 function abrir(i) {
