@@ -15,6 +15,11 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="loader" id="loader">
+      <img src="imagens/logos/logo (1).png" alt="Produtos Rodeio" />
+      <div class="loader-barra"><span></span></div>
+    </div>
+
     <button class="burger" id="burger" aria-label="Menu">
       <i class="fa-solid fa-bars"></i>
     </button>
@@ -158,7 +163,7 @@
         </div>
       </section>
 
-      <section id="onde" class="sec alt">
+      <section id="onde" class="sec alt onde-sec" >
         <div class="onde">
           <div class="onde-info">
             <h2>Onde Encontrar</h2>
@@ -189,45 +194,46 @@
         </div>
       </section>
 
-      <section id="contato" class="sec contato">
-        <div class="contato-grid">
-          <div>
-            <h2>Fale Conosco</h2>
-            <p class="contato-txt">
-              Tem alguma dúvida, sugestão ou quer fazer um pedido? Preencha o
-              formulário e nossa equipe entrará em contato o mais breve
-              possível.
-            </p>
-            <form action="enviar.php" method="post" class="form-card">
-              <div class="form-linha">
-                <input name="nome" placeholder="Nome completo*" required />
-                <input
-                  name="email"
-                  type="email"
-                  placeholder="E-mail*"
-                  required
-                />
-              </div>
-              <input name="fone" placeholder="Telefone / WhatsApp*" required />
-              <textarea
-                name="msg"
-                rows="4"
-                placeholder="Sua mensagem*"
-                required
-              ></textarea>
-              <button class="btn" type="submit">
-                Enviar mensagem <i class="fa-solid fa-arrow-right"></i>
-              </button>
-            </form>
-          </div>
-
-          <img
-            class="contato-img"
-            src="imagens/fotos/contato1.png"
-            alt="Estamos sempre prontos para te atender"
-          />
-        </div>
+      <section id="eventos" class="sec">
+        <h2>Feiras e Eventos</h2>
+        <p class="sub">Venha nos encontrar! Confira onde vamos estar nos próximos dias.</p>
+        <div class="eventos" id="listaEventos"></div>
       </section>
+
+     <section id="contato" class="sec contato">
+  <div class="contato-grid">
+    <div class="contato-form">
+      <h2>Fale Conosco</h2>
+      <p class="contato-txt">
+        Tem alguma dúvida, sugestão ou quer fazer um pedido? Preencha o
+        formulário e nossa equipe entrará em contato o mais breve possível.
+      </p>
+      <form action="enviar.php" method="post" class="form-card">
+        <div class="form-linha">
+          <input name="nome" placeholder="Nome completo*" required />
+          <input name="email" type="email" placeholder="E-mail*" required />
+        </div>
+        <input name="fone" placeholder="Telefone / WhatsApp*" required />
+        <textarea
+          name="msg"
+          rows="4"
+          placeholder="Sua mensagem*"
+          required
+        ></textarea>
+        <button class="btn" type="submit">
+          Enviar mensagem <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </form>
+    </div>
+
+    <div class="contato-foto">
+      <img
+        src="imagens/fotos/contato1.png"
+        alt="Estamos sempre prontos para te atender"
+      />
+    </div>
+  </div>
+</section>
 
       <footer>
         <div class="rod">
@@ -307,8 +313,7 @@
             fundou em meados de 1960.
           </p>
           <p>
-            [Aqui entra a história que a família contar: como ele começou,
-            causos, o jeito de trabalhar, o que ele deixou de legado.]
+            [Aqui entra a história da família...........]
           </p>
         </div>
       </div>

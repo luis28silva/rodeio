@@ -1,3 +1,16 @@
+// ===== TELA DE CARREGAMENTO =====
+(() => {
+  const loader = document.getElementById('loader');
+  const inicio = Date.now();
+  window.addEventListener('load', () => {
+    const resta = Math.max(0, 900 - (Date.now() - inicio)); // aparece pelo menos 0,9s
+    setTimeout(() => {
+      loader.classList.add('fim');
+      setTimeout(() => loader.remove(), 600);
+    }, resta);
+  });
+})();
+
 const ZAP = '5551999999999'; // trocar pelo número real
 
 // ===== PRODUTOS (exemplo: é só editar/adicionar) =====
@@ -55,6 +68,30 @@ const pontos = {
 
 const $ = id => document.getElementById(id);
 const zapLink = txt => `https://wa.me/${ZAP}?text=${encodeURIComponent(txt)}`;
+
+
+// ===== FEIRAS E EVENTOS (dados fictícios, é só editar/adicionar) =====
+const eventos = [
+  { dia: '15', mes: 'NOV', nome: 'Feira Colonial de Ivoti', local: 'Praça Central, Ivoti',
+    desc: 'Estaremos com rapaduras, paçocas, alfajores e muito mais. Venha provar!', img: '' },
+  { dia: '22', mes: 'NOV', nome: 'Festa do Amendoim', local: 'Presidente Lucena',
+    desc: 'Um dia inteiro de tradição, música e muito sabor do campo.', img: '' },
+  { dia: '06', mes: 'DEZ', nome: 'Feira de Natal', local: 'Dois Irmãos',
+    desc: 'Cestas e presentes artesanais para adoçar o seu Natal.', img: '' },
+];
+
+$('listaEventos').innerHTML = eventos.map(e => `
+  <article class="evento">
+    <div class="evento-img"${e.img ? ` style="background-image:url('${e.img}')"` : ''}>
+      ${e.img ? '' : '<i class="fa-solid fa-tent"></i>'}
+      <span class="evento-data"><strong>${e.dia}</strong>${e.mes}</span>
+    </div>
+    <div class="evento-info">
+      <h3>${e.nome}</h3>
+      <p class="evento-local"><i class="fa-solid fa-location-dot"></i> ${e.local}</p>
+      <p>${e.desc}</p>
+    </div>
+  </article>`).join('');
 
 // menu mobile (hambúrguer vira X)
 $('burger').onclick = () => {
