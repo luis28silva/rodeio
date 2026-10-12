@@ -501,6 +501,109 @@ footer {
   display: none;
 }
 
+.modal-box {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  max-width: 780px;
+  max-height: 90vh;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.modal-box #mImg {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+  background: #e8d3b0;
+  transition: opacity .12s;
+}
+
+.modal-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 28px;
+  overflow-y: auto;
+}
+
+.modal-info h3 {
+  font-family: 'Caveat', cursive;
+  font-size: 36px;
+  line-height: 1;
+}
+
+.modal-info h4 {
+  font-size: 18px;
+}
+
+.modal-info p {
+  color: #555;
+  line-height: 1.5;
+}
+
+.modal-info .btn {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  padding: 6px 14px;
+  background: #fff;
+  color: var(--red);
+  border: 1px solid var(--red);
+  border-radius: 30px;
+  font: 600 13px 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: background .2s, color .2s;
+}
+
+.chip:hover,
+.chip.on {
+  background: var(--red);
+  color: #fff;
+}
+
+.fechar {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  width: 36px;
+  height: 36px;
+  background: #fff;
+  color: #333;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .25);
+  cursor: pointer;
+}
+
+.fechar:hover {
+  background: var(--red);
+  color: #fff;
+}
+
+@media (max-width: 700px) {
+  .modal-box {
+    grid-template-columns: 1fr;
+    overflow-y: auto;
+  }
+
+  .modal-box #mImg {
+    height: 220px;
+    min-height: 0;
+  }
+}
 
 /* ========== TABLET E CELULAR ========== */
 @media (max-width: 900px) {
