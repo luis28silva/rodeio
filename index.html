@@ -20,12 +20,22 @@
     </button>
 
     <aside class="side" id="side">
-      <img src="imagens/logos/logo (1).png" alt="Produtos Rodeio" class="logo" />
+      <img
+        src="imagens/logos/logo (1).png"
+        alt="Produtos Rodeio"
+        class="logo"
+      />
       <nav>
         <a href="#inicio"><i class="fa-solid fa-house"></i> Início</a>
-        <a href="#produtos"><i class="fa-solid fa-table-cells-large"></i> Nossos Produtos</a>
-        <a href="#historia"><i class="fa-solid fa-file-lines"></i> Nossa História</a>
-       <a href="#onde"><i class="fa-solid fa-location-dot"></i> Onde Encontrar</a>
+        <a href="#produtos"
+          ><i class="fa-solid fa-table-cells-large"></i> Nossos Produtos</a
+        >
+        <a href="#historia"
+          ><i class="fa-solid fa-file-lines"></i> Nossa História</a
+        >
+        <a href="#onde"
+          ><i class="fa-solid fa-location-dot"></i> Onde Encontrar</a
+        >
         <a href="#contato"><i class="fa-solid fa-envelope"></i> Contato</a>
       </nav>
       <div class="social">
@@ -65,90 +75,163 @@
           <span class="txt-longo">Veja nossas próximas feiras e eventos</span>
           <span class="txt-curto">Feiras e eventos</span>
         </a>
-      <div class="hero-social">
-      <a href="https://instagram.com/rodeioprodutos" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-      <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-      <a href="https://wa.me/5551999999999" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-    </div>
+        <div class="hero-social">
+          <a
+            href="https://instagram.com/rodeioprodutos"
+            target="_blank"
+            aria-label="Instagram"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="#" aria-label="Facebook"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a
+            href="https://wa.me/5551999999999"
+            target="_blank"
+            aria-label="WhatsApp"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
+        </div>
         <div class="onda-hero"></div>
       </section>
 
       <section id="produtos" class="sec">
         <h2>Nossos Produtos</h2>
         <p class="sub">
-          Uma linha completa de delícias artesanais que levam o sabor do campo até você.</p>
+          Uma linha completa de delícias artesanais que levam o sabor do campo
+          até você.
+        </p>
         <div class="cards" id="cards"></div>
       </section>
-
 
       <section id="historia" class="sec alt">
         <div class="hist">
           <div>
             <h2>Nossa História</h2>
             <p>
-              A Produtos Rodeio nasceu da tradição familiar e do amor pelo que é
-              feito com as próprias mãos. Há anos, nossa família trabalha com
-              produtos coloniais, mantendo vivas as receitas e os valores do
-              campo.
+              Somos uma empresa familiar idealizada pelo patriarca Osório Victor
+              Schmitt, que sempre cultivou, produziu e vendeu rapadura de melado
+              e amendoim para as cidades vizinhas de Presidente Lucena. Osório
+              foi um visionário, com muita vontade de trabalhar e de ver a
+              família unida em prol da empresa.
             </p>
+            <p>
+              Fundada em meados de 1960 em Presidente Lucena, na Rota Romântica
+              do Rio Grande do Sul, seguimos com a mesma dedicação: produzimos
+              com amendoim, melado e chocolate, selecionando bem os ingredientes
+              para que a qualidade seja o nosso diferencial.
+            </p>
+            <button class="btn" id="maisHist">
+              Conheça mais <i class="fa-solid fa-arrow-right"></i>
+            </button>
           </div>
-          <img src="img/historia.png" alt="Nossa história" />
+          <img src="imagens/fotos/sobre_2.webp" alt="Nossa história" />
         </div>
       </section>
 
-      <section class="sec">
-        <h2>Por que escolher a Produtos Rodeio?</h2>
+      <section class="sec why-sec">
+        <h2>Por que escolher<br />a Produtos Rodeio?</h2>
         <div class="why">
-          <div>
+          <div class="why-item">
             <i class="fa-solid fa-leaf"></i>
             <h3>Ingredientes selecionados</h3>
+            <p>Qualidade e sabor em cada detalhe.</p>
           </div>
-          <div>
+
+          <div class="why-item">
             <i class="fa-solid fa-house"></i>
             <h3>Produção artesanal</h3>
+            <p>Receitas tradicionais com toque especial.</p>
           </div>
-          <div>
+
+          <div class="why-item">
             <i class="fa-solid fa-heart"></i>
             <h3>Tradição e confiança</h3>
+            <p>Mais de 60 anos levando o melhor para sua mesa.</p>
           </div>
-          <div>
+
+          <div class="why-item">
             <i class="fa-solid fa-truck"></i>
             <h3>Entrega para todo o Brasil</h3>
+            <p>Levando o sabor do campo até você.</p>
           </div>
         </div>
       </section>
 
       <section id="onde" class="sec alt">
-        <h2>Onde Encontrar</h2>
-        <p class="sub">Escolha sua cidade e veja onde comprar.</p>
-        <select id="cidade"></select>
-        <ul class="pontos" id="pontos"></ul>
-        <a class="btn" id="zapCidade" href="#" target="_blank"
-          >Não achou na sua cidade? Chame no WhatsApp</a
-        >
+        <div class="onde">
+          <div class="onde-info">
+            <h2>Onde Encontrar</h2>
+            <p class="sub">Escolha sua cidade e veja onde comprar.</p>
+            <select id="cidade"></select>
+            <a
+              class="btn btn-peq"
+              id="zapCidade"
+              href="#"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fa-brands fa-whatsapp"></i> Peça pelo WhatsApp
+            </a>
+          </div>
+
+          <div class="onde-painel">
+            <div class="onde-icones">
+              <span><i class="fa-solid fa-tent"></i></span>
+              <span><i class="fa-solid fa-bread-slice"></i></span>
+              <span><i class="fa-solid fa-apple-whole"></i></span>
+              <span><i class="fa-solid fa-store"></i></span>
+              <span><i class="fa-solid fa-basket-shopping"></i></span>
+              <span><i class="fa-solid fa-wheat-awn"></i></span>
+            </div>
+            <ul class="pontos" id="pontos"></ul>
+          </div>
+        </div>
       </section>
 
       <section id="contato" class="sec contato">
-        <div class="onda onda-topo"></div>
-        <h2>Fale Conosco</h2>
-        <form action="enviar.php" method="post">
-          <input name="nome" placeholder="Nome completo*" required />
-          <input name="email" type="email" placeholder="E-mail*" required />
-          <input name="fone" placeholder="Telefone / WhatsApp*" required />
-          <textarea
-            name="msg"
-            rows="4"
-            placeholder="Sua mensagem*"
-            required
-          ></textarea>
-          <button class="btn" type="submit">Enviar mensagem</button>
-        </form>
-        <div class="onda onda-escura"></div>
+        <div class="contato-grid">
+          <div>
+            <h2>Fale Conosco</h2>
+            <p class="contato-txt">
+              Tem alguma dúvida, sugestão ou quer fazer um pedido? Preencha o
+              formulário e nossa equipe entrará em contato o mais breve
+              possível.
+            </p>
+            <form action="enviar.php" method="post" class="form-card">
+              <div class="form-linha">
+                <input name="nome" placeholder="Nome completo*" required />
+                <input
+                  name="email"
+                  type="email"
+                  placeholder="E-mail*"
+                  required
+                />
+              </div>
+              <input name="fone" placeholder="Telefone / WhatsApp*" required />
+              <textarea
+                name="msg"
+                rows="4"
+                placeholder="Sua mensagem*"
+                required
+              ></textarea>
+              <button class="btn" type="submit">
+                Enviar mensagem <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </form>
+          </div>
+
+          <img
+            class="contato-img"
+            src="imagens/fotos/contato1.png"
+            alt="Estamos sempre prontos para te atender"
+          />
+        </div>
       </section>
 
       <footer>
         <div class="rod">
-          <img src="img/logo.png" alt="Produtos Rodeio" />
+          <img src="imagens/logos/logo (1).png" alt="Produtos Rodeio" />
           <nav>
             <a href="#inicio">Início</a>
             <a href="#produtos">Nossos Produtos</a>
@@ -174,10 +257,14 @@
             ></a>
           </div>
         </div>
+
         <div class="faixa">
-          <div class="onda onda-faixa"></div>
+          <div class="onda-faixa"></div>
           Produtos Rodeio — Tradição e sabor em cada detalhe | © 2026 Todos os
-          direitos reservados.
+          direitos reservados. | Desenvolvido por
+          <a href="https://lrwebdesign.com.br" target="_blank" rel="noopener"
+            >LR Web Design</a
+          >
         </div>
       </footer>
     </main>
@@ -196,6 +283,33 @@
           <a class="btn" id="mZap" href="#" target="_blank"
             ><i class="fa-brands fa-whatsapp"></i> Pedir pelo WhatsApp</a
           >
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="modalHist" hidden>
+      <div class="modal-box">
+        <button class="fechar" id="fecharHist" aria-label="Fechar">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <img
+          src="imagens/fotos/fundador.jpg"
+          alt="Osório Victor Schmitt, fundador"
+          class="foto-fundador"
+        />
+        <div class="modal-info">
+          <h3>Osório Victor Schmitt</h3>
+          <h4>Fundador da Produtos Rodeio</h4>
+          <p>
+            Osório cultivava, produzia e vendia rapadura de melado e amendoim
+            para as cidades vizinhas de Presidente Lucena. Visionário e
+            trabalhador, sonhava ver a família unida em torno da empresa que
+            fundou em meados de 1960.
+          </p>
+          <p>
+            [Aqui entra a história que a família contar: como ele começou,
+            causos, o jeito de trabalhar, o que ele deixou de legado.]
+          </p>
         </div>
       </div>
     </div>
